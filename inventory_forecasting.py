@@ -60,7 +60,8 @@ def read_db(db):
 	list_dfs = []
 	for item in serial:
 		sanitized_df = df[df['serial'] == item][['ds', 'y']]
-		list_dfs.append((item, sanitized_df))
+		if len(sanitized_df.index) > 2:
+			list_dfs.append((item, sanitized_df))
 
 	print(list_dfs)
 

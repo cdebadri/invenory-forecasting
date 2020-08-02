@@ -86,9 +86,9 @@ def write_db(db, results):
 		key, forecast = result
 		prediction = forecast['yhat'].values.toList()
 
-		db.equipment.update(
+		db.equipments.update_one(
 			{'serial': key}, 
-			{'$set': {'prediction': prediction}}
+			{'$set': {'predictions': predictions}}
 		)
 
 	return

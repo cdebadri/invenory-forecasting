@@ -1,4 +1,5 @@
 # invenory-forecasting
+Ensure you're running Python 3.x
 
 Other data source: https://www.kaggle.com/c/demand-forecasting-kernels-only/data
 
